@@ -7,10 +7,10 @@ use Symfony\Component\Process\Process;
 class ProcessExecutor
 {
     /**
-     * Number of seconds before the ProcessExecutor will cancel an operation.
-     * You might need to increase it at some point, if your checkout / database building takes too long
+     * There is no need to set a limit here, because builds would fail based on networking issues
+     * instead of application issues.
      */
-    const DEFAULT_TIMEOUT = 180;
+    const DEFAULT_TIMEOUT = 0;
 
     /**
      * @var OutputInterface
